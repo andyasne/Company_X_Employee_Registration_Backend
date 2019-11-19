@@ -16,7 +16,7 @@
       "examples": [
         {
           "title": "Body",
-          "content": "\n    {\n    \"name\": \"Florance\",\n    \"age\": \"35\",\n    \"email\": \"florance.tindel@fastmart.co\"\n}",
+          "content": "\n    {\n    \"firstname\": \"Florance\",\n    \"age\": \"35\",\n    \"lastname\": \"florance.tindo\"\n}",
           "type": "json"
         }
       ],

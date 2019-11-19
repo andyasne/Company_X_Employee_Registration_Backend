@@ -16,7 +16,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Body",
-          "content": "\n    {\n    \"name\": \"Florance\",\n    \"age\": \"35\",\n    \"email\": \"florance.tindel@fastmart.co\"\n}",
+          "content": "\n    {\n    \"firstname\": \"Florance\",\n    \"age\": \"35\",\n    \"lastname\": \"florance.tinde.co\"\n}",
           "type": "json"
         }
       ],
@@ -27,7 +27,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "name",
-            "description": "<ul> <li>name</li> </ul>"
+            "description": "<ul> <li>firstname</li> </ul>"
           },
           {
             "group": "Body",
@@ -41,7 +41,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "email",
-            "description": "<ul> <li>email</li> </ul>"
+            "description": "<ul> <li>firstname</li> </ul>"
           }
         ]
       }
@@ -54,7 +54,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "name",
-            "description": "<ul> <li>name</li> </ul>"
+            "description": "<ul> <li>firstname</li> </ul>"
           },
           {
             "group": "Success 200",
@@ -68,7 +68,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "email",
-            "description": "<ul> <li>email</li> </ul>"
+            "description": "<ul> <li>lastname</li> </ul>"
           },
           {
             "group": "Success 200",
@@ -103,7 +103,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Body",
-          "content": "\n    {\n    \"name\": \"Florance\",\n    \"age\": \"35\",\n    \"email\": \"florance.tindel@fastmart.co\",\n    \"__v\": \"14\",\n    \"firstModified\": \"2019-11-19T07:47:32.050Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.050Z\",\n    \"_id\": \"5dd39e1452adf2265077a915\"\n}",
+          "content": "\n    {\n    \"firstname\": \"Florance\",\n    \"age\": \"35\",\n    \"lastname\": \"florance.tindel@fastmart.co\",\n    \"__v\": \"14\",\n    \"firstModified\": \"2019-11-19T07:47:32.050Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.050Z\",\n    \"_id\": \"5dd39e1452adf2265077a915\"\n}",
           "type": "json"
         }
       ]
@@ -266,7 +266,7 @@ define({ "api": [
     },
     "sampleRequest": [
       {
-        "url": "http://localhost:3300/employee/employee"
+        "url": "http://localhost:3300/employee/"
       }
     ],
     "error": {
@@ -646,7 +646,7 @@ define({ "api": [
     },
     "sampleRequest": [
       {
-        "url": "http://localhost:3300/employee/employee"
+        "url": "http://localhost:3300/employee/"
       }
     ],
     "error": {

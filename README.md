@@ -11,13 +11,13 @@
 > https://github.com/andyasne/Company_X_Employee_Registration_Backend
 
 #### Documentation
-> http://localhost/employee/apidoc
+> http://localhost:3300/employee/apidoc
 
 #### Test Report
-> http://localhost/employee/test
+> http://localhost:3300/employee/test
 
 #### Test Coverage
-> http://localhost/employee/coverage
+> http://localhost:3300/employee/coverage
 
 #### Version
 > 0.0.1
