@@ -19,7 +19,7 @@ let employee = new Schema({
     firstName : {type:String,es_indexed:true},
     lastName : {type:String,es_indexed:true},
     age : {type:Number,es_indexed:true},
-    photo : {type:Blob,es_indexed:true},
+    photo : {type:String,es_indexed:true},
     employmentDate : {type : Date, es_indexed : true},
     firstModified : {type : Date, es_indexed : true},
     lastModified : {type : Date, es_indexed : true}
@@ -48,18 +48,6 @@ employee.pre('save',function preSave(next) {
 });
 
 let employeeSchema = mongoose.model('employee', employee);
-
-/**
- * @description     - Creating mapping with elastic search
- */
-employeeSchema.createMapping(function (err,mapping) {
-    if(err){
-        debug(`Error while mapping`);
-        debug(`Error is : ${err}`);
-    }else{
-        debug(`Successful Mapping`);
-        debug(`${mapping}`);
-    }
-});
+ 
 
 module.exports = employeeSchema;

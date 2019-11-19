@@ -86,7 +86,7 @@ exports.create          = function (req, res, next) {
 exports.find            = function (req, res, next) {
     debug('Find init.');
 
-    if(! util.isNullOrUndefined(req.query._id)) {
+    if(! util.isNullOrUndefined(req.query.id)) {
         if(util.isNullOrUndefined(req.query.private) === "true") {
             // todo insert authentication middle ware here
             getPrivate(req, res, next);
@@ -96,13 +96,13 @@ exports.find            = function (req, res, next) {
     }else{
         let option = {
             page     : util.isNullOrUndefined(req.query.page)   ? 1                             : Number(req.query.page),   // assigns default page value, if not specified.
-            sort     : util.isNullOrUndefined(req.query.sort)   ? {_id : -1}                    : req.query.sort,           // assigns default sort param value, if not specified.
+            sort     : util.isNullOrUndefined(req.query.sort)   ? {id : -1}                    : req.query.sort,           // assigns default sort param value, if not specified.
             lean     : util.isNullOrUndefined(req.query.lean)   ? false                         : req.query.lean,           // assigns default lean value, if not specified.
             limit    : util.isNullOrUndefined(req.query.limit)  ? config.COLLECTION_RETURN_SIZE : Number(req.query.limit),   // assigns default limit value (passed to the config), if not specified.
-            select   : "name age email firstModified lastModified"
+            select   : "firstName lastName age employmentDate"
         };
 
-        let query = controllerHelper.queryFilter(req,["name","age","email" , "_id", "__v"]);
+        let query = controllerHelper.queryFilter(req,["firstName","age","employmentDate","lastName" , "_id", "__v"]);
         // get collection paginated invoked
         employeeDAL.getCollectionsPaginated(query,option,function (err,data) {
             queryResponseHandler(err,data,res,function (err, data) { // Possible errors are handled.
@@ -136,9 +136,7 @@ exports.find            = function (req, res, next) {
  */
 exports.update          = function (req, res, next) {
     debug(`Update many init.`);
-
-    let query = controllerHelper.queryFilter(req,["name","age","email", "_id", "__v"]);
-
+    let query = controllerHelper.queryFilter(req,["firstName","lastName","age","employmentDate","_id","id"]);
     async.waterfall([
         pickUpdateData,
         updateData
@@ -153,8 +151,8 @@ exports.update          = function (req, res, next) {
      */
     function pickUpdateData (callback)                  {
         debug("Pick update data init...");
-
-        controllerHelper.pickUpdateData(["name","age","email"],req,function (err,validUpdateData) { // Picking up valid update data.
+      
+        controllerHelper.pickUpdateData(["firstName","lastName","age","employmentDate","_id"],req,function (err,validUpdateData) { // Picking up valid update data.
             if(Object.keys(validUpdateData).length === 0){ // No valid update data found.
                 let errMsg = errorCodes.SEC.IMPROPER_DATA;
                 errMsg.detail = "Valid update data not found in companyXEmployeeRegistration data update.";
@@ -200,9 +198,8 @@ exports.update          = function (req, res, next) {
  */
 exports.remove          = function (req, res, next) {
     debug('Remove many init.');
-
-    let query = controllerHelper.queryFilter(req,["name","age","email", "_id", "__v"]);
-
+    let query = controllerHelper.queryFilter(req,["firstName","lastName","age","employmentDate","_id","id"]);
+ 
     if(Object.keys(query).length === 0){
             let errMsg = errorCodes.SEC.NO_DATA_FOUND;
             errMsg.detail = "No query data found.";
@@ -231,7 +228,7 @@ function getPublic  (req, res, next) {
     debug('Find public init...');
 
     let
-        employeeId   = req.query._id,
+        employeeId   = req.query.id,
         query       = {_id: employeeId}; // query construction.
 
     employeeDAL.getPublic(query,function (err,data) { // retrieve employee public data (with out the value)
@@ -258,7 +255,7 @@ function getPrivate (req, res, next) {
     debug('Find private init...');
 
     let
-        employeeId = req.query._id,
+        employeeId = req.query.id,
         query = {_id: employeeId}; // query construction.
 
     employeeDAL.getPrivate(query,function (err,data) { // retrieve employee public data (with out the value)

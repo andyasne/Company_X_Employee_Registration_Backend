@@ -7,7 +7,7 @@
   "item": [
     
         {
-			"name": "employee",
+			"firstName": "firstName",
 			"description": "employee CRUD collection",
 			"item": [
 				{
@@ -24,10 +24,10 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"Tyler\",\n    \"age\": \"27\",\n    \"email\": \"tyler.jensen@dynaair.net\"\n}"
+          "raw": "{\n    \"name\": \"Tyler\",\n    \"age\": \"27\",\n    \"lastName\": \"tyler.jenseet\"\n}"
         },
         "url": {
-          "raw": "http://http://localhost:3300/employee/employee",
+          "raw": "http://http://localhost:3300/employee/create",
           "protocol": "http",
           "host": [
             "localhost"
@@ -52,7 +52,7 @@
           "raw": ""
         },
         "url": {
-          "raw": "http://http://localhost:3300/employee/employee",
+          "raw": "http://http://localhost:3300/employee/",
           "protocol": "http",
           "host": [
             "localhost"
@@ -77,7 +77,7 @@
           "raw": ""
         },
         "url": {
-          "raw": "http://http://localhost:3300/employee/employee?_id=5bc206d3048c9e1527797073",
+          "raw": "http://http://localhost:3300/employee/delete?id=5bc206d3048c9e1527797073",
           "protocol": "http",
           "host": [
             "localhost"
@@ -112,10 +112,10 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n    \"name\": \"Neida\",\n    \"age\": \"82\",\n    \"email\": \"neida.kelsey@sunopia.net\"\n}"
+          "raw": "{\n    \"firstname\": \"Neida\",\n    \"age\": \"82\",\n    \"lastname\": \"neida.kelsey.net\"\n}"
         },
         "url": {
-          "raw": "http://http://localhost:3300/employee/employee?_id=5bc20776048c9e1527797077",
+          "raw": "http://http://localhost:3300/employee/update?id=5bc20776048c9e1527797077",
           "protocol": "http",
           "host": [
             "localhost"

@@ -18,6 +18,6 @@ let
  */
 module.exports = function (app) {
 // Begin routing definition here
-    app.use('/employee/employee', employee);
+    app.use('/employee', employee);
 // End Routing definition here
 };

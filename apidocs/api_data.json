@@ -1,7 +1,7 @@
 [
   {
     "type": "post",
-    "url": "/employee/employee",
+    "url": "/employee/create",
     "title": "Create",
     "version": "0.0.1",
     "name": "Create",
@@ -196,7 +196,7 @@
   },
   {
     "type": "delete",
-    "url": "/employee/employee",
+    "url": "/employee/delete",
     "title": "Delete",
     "version": "0.0.1",
     "name": "Delete",
@@ -352,7 +352,7 @@
   },
   {
     "type": "get",
-    "url": "/employee/employee",
+    "url": "/employee/",
     "title": "Get",
     "version": "0.0.1",
     "name": "Get",
@@ -562,7 +562,7 @@
   },
   {
     "type": "put",
-    "url": "/employee/employee",
+    "url": "/employee/update",
     "title": "Update",
     "version": "0.0.1",
     "name": "Update",

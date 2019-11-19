@@ -1,7 +1,7 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "/employee/employee",
+    "url": "/employee/Create",
     "title": "Create",
     "version": "0.0.1",
     "name": "Create",
@@ -196,7 +196,7 @@ define({ "api": [
   },
   {
     "type": "delete",
-    "url": "/employee/employee",
+    "url": "/employee/delete",
     "title": "Delete",
     "version": "0.0.1",
     "name": "Delete",
@@ -352,7 +352,7 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/employee/employee",
+    "url": "/employee/",
     "title": "Get",
     "version": "0.0.1",
     "name": "Get",
@@ -562,7 +562,7 @@ define({ "api": [
   },
   {
     "type": "put",
-    "url": "/employee/employee",
+    "url": "/employee/update",
     "title": "Update",
     "version": "0.0.1",
     "name": "Update",

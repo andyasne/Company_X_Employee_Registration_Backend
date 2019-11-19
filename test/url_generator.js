@@ -18,8 +18,8 @@ module.exports = {
         
             employee : {
                 create          : ()=> `${employeeRoute}`,
-                findByIdPublic  : (id)=> `${employeeRoute}/?_id=${id}`,
-                findByIdPrivate : (id)=> `${employeeRoute}/?_id=${id}&private=true`,
+                findByIdPublic  : (id)=> `${employeeRoute}/?id=${id}`,
+                findByIdPrivate : (id)=> `${employeeRoute}/?id=${id}&private=true`,
                 findPaginated   : (query)=> `${employeeRoute}/?${query}`,
                 update          : (query)=> `${employeeRoute}/?${query}`,
                 remove          : (query)=> `${employeeRoute}/?${query}`
