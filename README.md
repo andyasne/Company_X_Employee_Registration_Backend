@@ -1,8 +1,8 @@
-# companyXEmployeeRegistration
+# company X Employee Registration
 
 #### Description
 
-> Company X Employee Registration
+> Company X Employee Registration Registers an Employee
 
 #### Author
 > Andinet Asamnew
@@ -18,9 +18,6 @@
 
 #### Test Coverage
 > http://localhost/employee/coverage
-
-#### License
-> MIT
 
 #### Version
 > 0.0.1
