@@ -1,0 +1,32 @@
+version: '2'
+services:
+
+  #################################################################################################################################
+  ########################                      company_x_employee_registration              #####################################################
+  #################################################################################################################################
+
+    company_x_employee_registration:
+      build: ./.
+      ports:
+        - "3300:3300"
+      restart: always
+      environment:
+        - DEBUG=*
+        - HTTP_PORT=3300
+        - MODE=test_mode
+        - MONGODB_URL=mongodb://company_x_employee_registration_db:27017/company_x_employee_registration
+        - REVERSE_PROXY=http://localhost
+        - COLLECTION_RETURN_SIZE=24
+        - ELASTIC_SEARCH_URL=http://localhost:9200
+        - LOG_STASH_PORT=5000
+      depends_on:
+        - company_x_employee_registration_db
+    # Defining company_x_employee_registration DB
+    company_x_employee_registration_db:
+       image: mongo:latest
+       restart: always
+       volumes:
+         - .:/data/db
+
+  #################################################################################################################################
+  #################################################################################################################################

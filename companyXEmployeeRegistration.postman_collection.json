@@ -1,0 +1,142 @@
+{
+  "info": {
+    "name": "companyXEmployeeRegistration",
+    "description": "Company X Employee Registration",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    
+        {
+			"name": "employee",
+			"description": "employee CRUD collection",
+			"item": [
+				{
+      "name": "Create employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Tyler\",\n    \"age\": \"27\",\n    \"email\": \"tyler.jensen@dynaair.net\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/employee/employee",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "employee",
+            "employee"
+          ]
+        },
+        "description": "Create employee"
+      },
+      "response": []
+    },
+    {
+      "name": "Get employee",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/employee/employee",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "employee",
+            "employee"
+          ]
+        },
+        "description": "Get employee"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete employee",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/employee/employee?_id=5bc206d3048c9e1527797073",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "employee",
+            "employee"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc206d3048c9e1527797073"
+            }
+          ]
+        },
+        "description": "Delete employee"
+      },
+      "response": []
+    },
+    {
+      "name": "Update employee",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "name": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Neida\",\n    \"age\": \"82\",\n    \"email\": \"neida.kelsey@sunopia.net\"\n}"
+        },
+        "url": {
+          "raw": "http://http://localhost:3300/employee/employee?_id=5bc20776048c9e1527797077",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3300",
+          "path": [
+            "employee",
+            "employee"
+          ],
+          "query": [
+            {
+              "key": "_id",
+              "value": "5bc20776048c9e1527797077"
+            }
+          ]
+        },
+        "description": "Update employee"
+      },
+      "response": []
+    }]
+}
+
+  ]
+}
