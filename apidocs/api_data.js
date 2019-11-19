@@ -40,7 +40,7 @@ define({ "api": [
             "group": "Body",
             "type": "String",
             "optional": false,
-            "field": "email",
+            "field": "lastname",
             "description": "<ul> <li>firstname</li> </ul>"
           }
         ]
@@ -67,7 +67,7 @@ define({ "api": [
             "group": "Success 200",
             "type": "String",
             "optional": false,
-            "field": "email",
+            "field": "lastname",
             "description": "<ul> <li>lastname</li> </ul>"
           },
           {
@@ -230,7 +230,7 @@ define({ "api": [
             "group": "Query",
             "type": "String",
             "optional": true,
-            "field": "email",
+            "field": "lastname",
             "defaultValue": "undefined",
             "description": "<ul> <li>String</li> </ul>"
           }
@@ -426,7 +426,7 @@ define({ "api": [
             "group": "Query",
             "type": "String",
             "optional": true,
-            "field": "email",
+            "field": "lastname",
             "defaultValue": "undefined",
             "description": "<ul> <li>String</li> </ul>"
           }
@@ -469,7 +469,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Body",
-          "content": "\n{\n        \"docs\": [\n\n    {\n    \"name\": \"Myong\",\n    \"age\": \"48\",\n    \"email\": \"myong.woodrum@viewtopia.name\",\n    \"__v\": \"87\",\n    \"firstModified\": \"2019-11-19T07:47:32.055Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.055Z\",\n    \"_id\": \"5dd39e1452adf2265077a916\"\n},\n    {\n    \"name\": \"Selma\",\n    \"age\": \"27\",\n    \"email\": \"selma.stine@duoserve.info\",\n    \"__v\": \"72\",\n    \"firstModified\": \"2019-11-19T07:47:32.064Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.064Z\",\n    \"_id\": \"5dd39e1452adf2265077a917\"\n},\n    {\n    \"name\": \"Elaine\",\n    \"age\": \"31\",\n    \"email\": \"elaine.cappel@smartsystems.co\",\n    \"__v\": \"40\",\n    \"firstModified\": \"2019-11-19T07:47:32.066Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.066Z\",\n    \"_id\": \"5dd39e1452adf2265077a918\"\n}\n            \n        ],\n        \"total\": 12,\n        \"limit\": 3,\n        \"offset\": 0\n    }",
+          "content": "\n{\n        \"docs\": [\n\n    {\n    \"name\": \"Myong\",\n    \"age\": \"48\",\n    \"lastname\": \"myong.woodrum@viewtopia.name\",\n    \"__v\": \"87\",\n    \"firstModified\": \"2019-11-19T07:47:32.055Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.055Z\",\n    \"_id\": \"5dd39e1452adf2265077a916\"\n},\n    {\n    \"name\": \"Selma\",\n    \"age\": \"27\",\n    \"lastname\": \"selma.stine@duoserve.info\",\n    \"__v\": \"72\",\n    \"firstModified\": \"2019-11-19T07:47:32.064Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.064Z\",\n    \"_id\": \"5dd39e1452adf2265077a917\"\n},\n    {\n    \"name\": \"Elaine\",\n    \"age\": \"31\",\n    \"lastname\": \"elaine.cappel@smartsystems.co\",\n    \"__v\": \"40\",\n    \"firstModified\": \"2019-11-19T07:47:32.066Z\",\n    \"lastModified\": \"2019-11-19T07:47:32.066Z\",\n    \"_id\": \"5dd39e1452adf2265077a918\"\n}\n            \n        ],\n        \"total\": 12,\n        \"limit\": 3,\n        \"offset\": 0\n    }",
           "type": "json"
         }
       ]
@@ -577,7 +577,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Body",
-          "content": "\n    {\n    \"name\": \"Kirstie\",\n    \"age\": \"71\",\n    \"email\": \"kirstie.milligan@conixco.biz\"\n}",
+          "content": "\n    {\n    \"name\": \"Kirstie\",\n    \"age\": \"71\",\n    \"lastname\": \"kirstie.milligan@conixco.biz\"\n}",
           "type": "json"
         }
       ],
@@ -603,7 +603,7 @@ define({ "api": [
             "group": "Query",
             "type": "String",
             "optional": true,
-            "field": "email",
+            "field": "lastname",
             "defaultValue": "undefined",
             "description": "<ul> <li>String</li> </ul>"
           }
